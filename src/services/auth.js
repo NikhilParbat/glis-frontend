@@ -9,9 +9,5 @@ const API = axios.create({
 export const signupUser = async (data) => API.post("/auth/register", data);
 export const loginUser = async (data) => API.post("/auth/login", data);
 export const getAllUsers = () => API.get("/auth/users");
-export const deleteUser = async (id) => {
-  const token = localStorage.getItem("token");
-  return API.delete(`/auth/user/${id}`, {
-    headers: { Authorization: `Bearer ${token}` },
-  });
-};
+export const editUser = async (id, data) => API.put(`/auth/user/${id}`, data);
+export const deleteUser = async (id) => API.delete(`/auth/user/${id}`);
