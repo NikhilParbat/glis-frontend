@@ -17,12 +17,12 @@ export default function Sidebar({ onLogout }) {
       icon: <Home size={18} />,
     },
     { path: "/lands", label: "Lands Data", icon: <Map size={18} /> },
-    { path: "/reports", label: "Reports", icon: <FileText size={18} /> },
+    { path: "/encroachments", label: "Reports", icon: <FileText size={18} /> },
   ];
 
   if (role === "Admin") {
     navItems.push({
-      path: "/users",
+      path: "/admin/users",
       label: "Manage Users",
       icon: <Users size={18} />,
     });

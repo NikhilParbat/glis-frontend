@@ -12,6 +12,7 @@ export const fetchLands = () => API.get("/lands/");
 export const fetchLandbyID = async (id) => API.get("/lands/", id);
 export const editLand = async (id) => API.put("/lands/", id);
 export const addLand = (landData) => API.post("/lands/", landData);
+export const deleteLand = (id) => API.delete(`/lands/${id}`);
 // export const fetchDisputes = () => API.get("/land/disputes");
 
 export const encroachmentsReport = () => API.get("/reports/summary");
